@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 1.0f;
     [SerializeField] private ContactFilter2D movementFilter;
     [SerializeField] private float collisionOffset = 0.1f;
-    [SerializeField] private Animator animator;
     
 
     public bool CanMove { get; private set; } = true;
@@ -17,10 +16,12 @@ public class PlayerController : MonoBehaviour
     private List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>();
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rb;
+    private Animator _animator;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = transform.GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -36,11 +37,11 @@ public class PlayerController : MonoBehaviour
             if(!success)
                 success = TryMove(new Vector2(0, _moveInput.y));
             
-            animator.SetBool("IsMoving", success);
+            _animator.SetBool("IsMoving", success);
         }
         else
         {
-            animator.SetBool("IsMoving", false);
+            _animator.SetBool("IsMoving", false);
         }
     }
     

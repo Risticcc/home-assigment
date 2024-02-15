@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textBox;
     [SerializeField] private TextMeshProUGUI nameBox;
+    [SerializeField] private GameObject button;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private Animator animator;
     
@@ -19,22 +21,23 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         _sentences = new Queue<string>();
-        dialoguePanel.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        dialoguePanel.SetActive(false);
+        button.SetActive(false);
     }
 
-    public void StartDialogue(Dialogue dialogue)
+  
+
+    public void StartDialogue(Dialogue dialogue, string npcName)
     {
         //DialogueStart.Invoke();
         _sentences.Clear();
         
+        if(dialogue.expectInteraction)
+            ActivateButton();
+        
         dialoguePanel.SetActive(true);
-        nameBox.text = dialogue.name;
+        nameBox.text = npcName;
         
         foreach(var sentance in dialogue.sentences)
         {
@@ -43,6 +46,8 @@ public class DialogueManager : MonoBehaviour
         
         DisplayNextSentence();
     }
+    
+  
 
 
     private void DisplayNextSentence()
@@ -72,5 +77,10 @@ public class DialogueManager : MonoBehaviour
     {
        // DialogueOver.Invoke();
         dialoguePanel.SetActive(false);
+    }
+
+    private void ActivateButton()
+    {
+        button.SetActive(true);
     }
 }

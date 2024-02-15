@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    [SerializeField] private NPC npc;
+    
     public Dialogue dialogue;
     private DialogueManager _dialogueManager;
-    public bool startDialogue = false;
     void Start()
     {
         _dialogueManager = FindObjectOfType<DialogueManager>();
@@ -14,7 +15,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {  
-        _dialogueManager.StartDialogue(dialogue);
+        _dialogueManager.StartDialogue(dialogue, npc.name);
     }
     
 
