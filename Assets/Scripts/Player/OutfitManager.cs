@@ -6,7 +6,7 @@ public class OutfitManager : MonoBehaviour
 {
     private GameObject _playerOutfitPrefab;
     
-    private Inventory _inventory;
+    private InventoryWarderobe _inventoryWarderobe;
     private Sprite _playerOutfitSprite;
     private PlayerController _playerController;
     public Sprite PlayerOutfitImage => _playerOutfitSprite;
@@ -15,7 +15,7 @@ public class OutfitManager : MonoBehaviour
     private void Start()
     {
         _playerController = GetComponent<PlayerController>();
-        _inventory = GetComponent<Inventory>();
+        _inventoryWarderobe = GetComponent<InventoryWarderobe>();
         
         Init();
     }
@@ -26,7 +26,7 @@ public class OutfitManager : MonoBehaviour
         if(activeOutfit != null)
         {
             _playerOutfitSprite = activeOutfit.GetComponent<PlayerInfo>().Item.icon;
-            _inventory.AddItem(activeOutfit.GetComponent<PlayerInfo>().Item);
+            _inventoryWarderobe.AddItem(activeOutfit.GetComponent<PlayerInfo>().Item);
         }
     }
 

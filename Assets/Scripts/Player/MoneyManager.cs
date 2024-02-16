@@ -8,11 +8,11 @@ public class MoneyManager : MonoBehaviour
     [SerializeField] private float money;
     [SerializeField] private TextMeshProUGUI moneyText;
     
-    private Inventory _inventory;
+    private InventoryWarderobe _inventoryWarderobe;
     
     private void Start()
     {
-        _inventory = GetComponent<Inventory>();
+        _inventoryWarderobe = GetComponent<InventoryWarderobe>();
         RefresUI();
     }
     
@@ -31,7 +31,7 @@ public class MoneyManager : MonoBehaviour
         if (money >= amount)
         {
             money -= amount;
-            _inventory.AddItem(item);
+            _inventoryWarderobe.AddItem(item);
             
             RefresUI();
             Debug.Log("Spent " + amount + " money. Total money: " + money);

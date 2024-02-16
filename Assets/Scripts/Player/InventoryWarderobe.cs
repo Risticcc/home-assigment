@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class InventoryWarderobe : MonoBehaviour
 {
     [SerializeField] private List<Item> items = new List<Item>();
     [SerializeField] private List<InventorySlot> slots = new List<InventorySlot>();
