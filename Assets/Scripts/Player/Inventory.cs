@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject inventoryUI;
     [SerializeField] private GameObject slotUIPrefab;
 
-    public void Start()
+    public void Awake()
     {
         InitaliseSlots();
     }
