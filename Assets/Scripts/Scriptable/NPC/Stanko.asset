@@ -17,7 +17,7 @@ MonoBehaviour:
   dialogues:
     sentences:
     - Hey man, you wanna buy something?
-    expectInteraction: 0
+    expectInteraction: 1
   storeDescription: ' "Ahoy, brave adventurer! Welcome to my humble emporium, where
     the winds of fashion blow as freely as the sea breeze! Step ashore and behold
     the treasures that await your discerning eye. From rugged sailor garb to elegant

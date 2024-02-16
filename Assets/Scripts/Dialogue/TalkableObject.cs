@@ -20,6 +20,7 @@ public class TalkableObject : BaseInteract
         base.Init(interactionPanel);
         
         _dialogueTrigger = GetComponent<DialogueTrigger>();
+        
     }
     
     public override void Interact(GameObject gameObject)
@@ -33,7 +34,7 @@ public class TalkableObject : BaseInteract
         if (Input.GetKeyDown(KeyCode.E))
         {
             base.HideInteractionPanel();
-            _dialogueTrigger.TriggerDialogue();
+            _dialogueTrigger.TriggerDialogue(UseEvents);
         }
     }
 

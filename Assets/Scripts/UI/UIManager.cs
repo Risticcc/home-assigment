@@ -9,6 +9,21 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject dialoguePanel;
 
+    public static UIManager Instance { get; private set; }
+    
+    public Action OnEquip;
+
+    public void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -24,6 +39,7 @@ public class UIManager : MonoBehaviour
     
     public void OpenStorePanel()
     {
+        CloseDialoguePanel();
         storePanel.SetActive(true);
     }
     
@@ -34,11 +50,18 @@ public class UIManager : MonoBehaviour
     
     public void OpenPausePanel()
     {
+        CloseDialoguePanel();
+        CloseStorePanel();
         pausePanel.SetActive(true);
     }
     
     public void CloseDialoguePanel()
     {
         dialoguePanel.SetActive(false);
+    }
+
+    public void RefreshPlayerPanel()
+    {
+        OnEquip?.Invoke();
     }
 }

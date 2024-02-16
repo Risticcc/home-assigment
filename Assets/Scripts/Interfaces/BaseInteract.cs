@@ -8,6 +8,7 @@ public abstract class BaseInteract : MonoBehaviour
     private GameObject InteractionPanel { get; set; }
     public bool PromptShown = false;
     private float _timeToHide = 2f;
+    public bool UseEvents;
 
     public abstract void Interact(GameObject gameObject);
 
@@ -29,6 +30,8 @@ public abstract class BaseInteract : MonoBehaviour
         InteractionPanel = interactionPanel;
         HideInteractionPanel();
     }
+    
+    
     
 
 }

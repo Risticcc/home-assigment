@@ -21,8 +21,38 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _animator = transform.GetChild(0).GetComponent<Animator>();
+       AnimatorSetUp();
     }
+
+    public void AnimatorSetUp()
+    {
+        var child = FindActiveChild();
+        if (child != null)
+        {
+            _animator = child.GetComponent<Animator>();
+            if (_animator == null)
+            {
+                Debug.LogWarning("Active child object does not have an Animator component");
+            }
+        }
+        
+        
+    }
+
+    public GameObject FindActiveChild()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            var child = transform.GetChild(i);
+            if (child.gameObject.activeSelf)
+            {
+                return child.gameObject;
+            }
+        }
+        Debug.LogWarning("No active child object found");
+        return null;
+    }
+    
 
     // Update is called once per frame
     void Update()

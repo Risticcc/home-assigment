@@ -11,10 +11,11 @@ public class DialogueTrigger : MonoBehaviour
         _dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
-    public void TriggerDialogue()
+    public void TriggerDialogue(bool useEvents)
     {  
-        _dialogueManager.StartDialogue(npc.dialogues, npc.name);
+        _dialogueManager.StartDialogue(npc.dialogues, npc.name, useEvents);
     }
+  
     
 
     public void CloseConversationUI()

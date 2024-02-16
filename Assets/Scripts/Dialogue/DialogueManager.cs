@@ -4,37 +4,37 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textBox;
     [SerializeField] private TextMeshProUGUI nameBox;
-    [SerializeField] private GameObject button;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private Animator animator;
     
     private Queue<string> _sentences;
+    private ChoicesManager _choicesManager;
     
     //public Action DialogueOver;
     //public Action DialogueStart;
     void Start()
     {
-        _sentences = new Queue<string>();
-        
+        _choicesManager = GetComponent<ChoicesManager>();
         dialoguePanel.SetActive(false);
-        button.SetActive(false);
+        
+        _sentences = new Queue<string>();
+
     }
-
-  
-
-    public void StartDialogue(Dialogue dialogue, string npcName)
+    
+    public void StartDialogue(Dialogue dialogue, string npcName, bool useEvents)
     {
         //DialogueStart.Invoke();
         _sentences.Clear();
         
-        if(dialogue.expectInteraction)
-            ActivateButton();
+        if(useEvents)
+            _choicesManager.ActivateChoices();
         
         dialoguePanel.SetActive(true);
         nameBox.text = npcName;
@@ -47,8 +47,6 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
     
-  
-
 
     private void DisplayNextSentence()
     {
@@ -79,8 +77,7 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
     }
 
-    private void ActivateButton()
-    {
-        button.SetActive(true);
-    }
+  
+
+
 }

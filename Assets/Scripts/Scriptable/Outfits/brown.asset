@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb7ecfcb576d94b398b5a6034a6074b5, type: 3}
-  m_Name: item1
+  m_Name: brown
   m_EditorClassIdentifier: 
-  name: Blue outfit
+  id: 0
+  name: brown
   price: 100
-  icon: {fileID: 21300000, guid: 1c84373cf4be81c44b97ce70ed9d78e6, type: 3}
-  prefab: {fileID: 1000013234968400, guid: 4a6e9a7d544412d4d92db88d8587228e, type: 3}
+  icon: {fileID: 21300000, guid: 5ec76be98dda24b1583c5614f736a1a2, type: 3}
+  prefab: {fileID: 1000010208881502, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 3}

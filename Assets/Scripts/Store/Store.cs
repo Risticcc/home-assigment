@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Store : MonoBehaviour
@@ -15,10 +16,13 @@ public class Store : MonoBehaviour
   
     
     [SerializeField] private GameObject slotUIPrefab;
-    [SerializeField] private GameObject inventoryUI;
+    [SerializeField] private GameObject storeInventoryUI;
+    
     [SerializeField] private Image merchantImage;
     [SerializeField] private TextMeshProUGUI merchantText;
     [SerializeField] private NPC merchant;
+    
+    [SerializeField] private Image playerImage;
     [SerializeField] private GameObject player;
     
     public void SellItem(GameObject item)
@@ -40,6 +44,8 @@ public class Store : MonoBehaviour
     public void Start()
     {
         InitaliseSlots();
+        UIManager.Instance.OnEquip += UpdatePlayerImage;
+
     }
     
 
@@ -62,19 +68,35 @@ public class Store : MonoBehaviour
     
     private void InitaliseSlots()
     {
+        var currentOutfit = player.GetComponent<OutfitManager>().PlayerOutfitImage;
         for(int i = 0; i< items.Count; i++)
         {
-            var slot = Instantiate(slotUIPrefab, inventoryUI.transform);
+            if(items[i].icon == currentOutfit) //Don't show the current outfit in the store
+                continue; 
+            
+            var slot = Instantiate(slotUIPrefab, storeInventoryUI.transform);
             var invSlot = slot.GetComponent<InventorySlot>();
             invSlot.UpdateSlot(items[i]);
             
             slots.Add(slot.GetComponent<InventorySlot>());
         }
 
+        
+        UpdateMerchantInfo();
+        UpdatePlayerImage();
+    }
+
+    private void UpdateMerchantInfo()
+    {
         merchantImage.sprite = merchant.image;
         StartCoroutine(TypeSentence(merchant.storeDescription));
     }
-    
+
+    private void UpdatePlayerImage()
+    {
+        playerImage.sprite = player.GetComponent<OutfitManager>().PlayerOutfitImage;
+    }
+
     private IEnumerator TypeSentence(string sentence)
     { 
         merchantText.text = "";
@@ -84,5 +106,6 @@ public class Store : MonoBehaviour
             yield return null;
         }
     }
+    
     
 }
