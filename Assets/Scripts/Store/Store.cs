@@ -24,15 +24,21 @@ public class Store : MonoBehaviour
     
     [SerializeField] private Image playerImage;
     [SerializeField] private GameObject player;
+
+    [SerializeField] private GameObject CoinsPanel;
+    private Animator coinAnimator;
     
     public void SellItem(GameObject item)
     {
         var itemComponent = item.GetComponent<InventorySlot>();
         var moneyManager = player.GetComponent<MoneyManager>();
-        
+
         if (!moneyManager.SpendMoney(itemComponent.Item))
-            return; //Not enough money to buy the item
-        
+        {
+            coinAnimator.SetTrigger("OnClick");
+            return;
+        }
+
         if (items.Contains(itemComponent.Item))
         {
             _money += itemComponent.Item.price;
@@ -44,8 +50,9 @@ public class Store : MonoBehaviour
     public void Start()
     {
         InitaliseSlots();
+        
         UIManager.Instance.OnEquip += UpdatePlayerImage;
-
+        coinAnimator = CoinsPanel.GetComponent<Animator>();
     }
     
 
