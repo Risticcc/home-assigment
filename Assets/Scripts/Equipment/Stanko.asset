@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2a95c061b3a4b258b0ad0577530b5e, type: 3}
+  m_Name: Stanko
+  m_EditorClassIdentifier: 
+  name: Stanko
+  image: {fileID: 21300000, guid: 8685bc8962ad74c019f8fbc3373d6d8d, type: 3}
+  dialogues:
+    sentences:
+    - Hey man, you wanna buy something?
+    expectInteraction: 0
+  storeDescription: ' "Ahoy, brave adventurer! Welcome to my humble emporium, where
+    the winds of fashion blow as freely as the sea breeze! Step ashore and behold
+    the treasures that await your discerning eye. From rugged sailor garb to elegant
+    evening attire, I''ve got just what you need to sail the high seas in style!
+    So, what''ll it be, matey? Let''s make a splash on the fashion horizon together!"'

@@ -270,7 +270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &98692093
 RectTransform:
   m_ObjectHideFlags: 0
@@ -864,7 +864,7 @@ MonoBehaviour:
   inventoryUI: {fileID: 84381739}
   merchantImage: {fileID: 1486849879}
   merchantText: {fileID: 1668331588}
-  merchant: {fileID: 11400000, guid: c7187ff0f74ba4c0f96ee127512067b1, type: 2}
+  merchant: {fileID: 11400000, guid: db1c69b93ab414b3caac14cfbbc6931a, type: 2}
   player: {fileID: 44266537}
 --- !u!4 &374813244
 Transform:
@@ -1738,8 +1738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storePanel: {fileID: 2057957760}
-  pausePanel: {fileID: 0}
-  dialoguePanel: {fileID: 98692092}
+  pausePanel: {fileID: 2057957760}
+  dialoguePanel: {fileID: 2057957760}
 --- !u!1 &624901729
 GameObject:
   m_ObjectHideFlags: 0
@@ -70704,7 +70704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09be448a7df841b5b8c95878b37795a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npc: {fileID: 11400000, guid: 8b8fd49f6bf9346ceb19759f5ead6e4d, type: 2}
+  npc: {fileID: 11400000, guid: db1c69b93ab414b3caac14cfbbc6931a, type: 2}
   dialogue:
     sentences: []
     expectInteraction: 0

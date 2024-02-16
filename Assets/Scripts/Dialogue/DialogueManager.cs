@@ -54,7 +54,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (_sentences.Count == 0)
         {
-            EndDialogue();
+            //EndDialogue(); because of buttons
             return;
         }
 

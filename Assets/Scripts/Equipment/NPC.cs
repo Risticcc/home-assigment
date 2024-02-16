@@ -8,6 +8,6 @@ public class NPC : ScriptableObject
 {
      public string name;
      public Sprite image;
-     public Dialogue[] dialogues;
+     public Dialogue dialogues;
      public string storeDescription;
 }
