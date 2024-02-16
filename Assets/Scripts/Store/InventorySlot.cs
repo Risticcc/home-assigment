@@ -10,6 +10,7 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI price; 
     [SerializeField] private TextMeshProUGUI itemName;
+    [SerializeField] private GameObject button;
     [SerializeField] private Image defaultImage;
     
     private Item _item;
@@ -18,6 +19,7 @@ public class InventorySlot : MonoBehaviour
 
     public void UpdateSlot(Item item)
     {
+        button.SetActive(true);
         _item = item;
         
         image.sprite = item.icon;
@@ -32,5 +34,7 @@ public class InventorySlot : MonoBehaviour
         //image.sprite = defaultImage.sprite;
         itemName.text = ""; 
         price.text = "";
+        
+        button.SetActive(false);
     }
 }

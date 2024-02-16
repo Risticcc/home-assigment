@@ -706,6 +706,7 @@ MonoBehaviour:
   image: {fileID: 8756616003902913280}
   price: {fileID: 1758210896715465820}
   itemName: {fileID: 5351982429565763649}
+  button: {fileID: 4926190547961343234}
   defaultImage: {fileID: 0}
 --- !u!114 &7002707096150654209
 MonoBehaviour:

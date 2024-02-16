@@ -8,7 +8,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject storePanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject dialoguePanel;
-
+    [SerializeField] private GameObject startPanel;
+    [SerializeField] private GameObject playerPanel;
+    
     public static UIManager Instance { get; private set; }
     
     public Action OnEquip;
@@ -30,6 +32,23 @@ public class UIManager : MonoBehaviour
         storePanel.SetActive(false);
         pausePanel.SetActive(false);
         dialoguePanel.SetActive(false);
+        playerPanel.SetActive(false);
+        startPanel.SetActive(true);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (pausePanel.activeSelf)
+            {
+                ClosePausePanel();
+            }
+            else
+            {
+                OpenPausePanel();
+            }
+        }
     }
 
     public void CloseStorePanel()
@@ -64,4 +83,18 @@ public class UIManager : MonoBehaviour
     {
         OnEquip?.Invoke();
     }
+
+    public void StartGame()
+    {
+        startPanel.SetActive(false);
+        playerPanel.SetActive(true);
+        Time.timeScale = 1;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    
+    
 }
