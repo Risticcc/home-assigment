@@ -12,6 +12,7 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private Sprite defaultImage;
     
     private Item _item;
+    public Item Item => _item;
     
 
     public void UpdateSlot(Item item)

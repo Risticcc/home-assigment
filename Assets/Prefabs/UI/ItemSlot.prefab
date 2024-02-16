@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 3880702911683142761}
   - component: {fileID: 5309875880550300031}
   - component: {fileID: 1197516142598099200}
+  - component: {fileID: 974646513176560854}
   m_Layer: 5
   m_Name: ItemSlot
   m_TagString: Untagged
@@ -286,10 +287,10 @@ RectTransform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 927917031414984044}
   - {fileID: 8887661073853353427}
   - {fileID: 1753734237636859884}
   - {fileID: 627570997957339408}
-  - {fileID: 927917031414984044}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -351,6 +352,19 @@ MonoBehaviour:
   price: {fileID: 4462573273741797529}
   itemName: {fileID: 2047467587826022232}
   defaultImage: {fileID: 0}
+--- !u!114 &974646513176560854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065125191787446615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95750cd74023f4139844fc57bb851720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 1247279982643153320}
 --- !u!1 &3500071864438154855
 GameObject:
   m_ObjectHideFlags: 0
