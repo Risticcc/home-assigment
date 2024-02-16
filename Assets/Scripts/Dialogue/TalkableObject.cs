@@ -49,9 +49,12 @@ public class TalkableObject : BaseInteract
                 if(collider.gameObject.CompareTag("Player"))
                     return;
             }
+            
             PromptShown = false;
+            base.HideInteractionPanel();
             _dialogueTrigger.CloseConversationUI();
         }
+    
     }
     
     private void OnDrawGizmos()

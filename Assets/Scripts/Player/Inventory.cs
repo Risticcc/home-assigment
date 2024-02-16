@@ -20,7 +20,9 @@ public class Inventory : MonoBehaviour
     public void AddItem(Item item)
     {
         items.Add(item);
-        slots[items.IndexOf(item)].UpdateSlot(item);
+        var index = items.IndexOf(item);
+        Debug.Log(index);
+        slots[index].UpdateSlot(item);
     }
     
     public void RemoveItem(Item item)
@@ -29,11 +31,6 @@ public class Inventory : MonoBehaviour
         slots[items.IndexOf(item)].ClearSlot();
     }
     
-    public void UseItem(Item item)
-    {
-        Debug.Log("Using " + item.name);
-        //TODO apply on player
-    }
     
     private void InitaliseSlots()
     {

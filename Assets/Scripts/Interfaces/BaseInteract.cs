@@ -21,7 +21,6 @@ public abstract class BaseInteract : MonoBehaviour
 
     protected virtual void HideInteractionPanel()
     {
-        Debug.Log("E pressed, hiding panel");
         InteractionPanel.SetActive(false);
     }
 
