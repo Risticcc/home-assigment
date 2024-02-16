@@ -40,7 +40,7 @@ public class InventoryWarderobe : MonoBehaviour
             var invSlot = slot.GetComponent<InventorySlot>();
             invSlot.ClearSlot();
             
-            slots.Add(slot.GetComponent<InventorySlot>());
+            slots.Add(slot.GetComponent<InventorySlot>()); 
         }
     }
 }

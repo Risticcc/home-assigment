@@ -1,10 +1,8 @@
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Store : MonoBehaviour
@@ -86,6 +84,7 @@ public class Store : MonoBehaviour
             invSlot.UpdateSlot(items[i]);
             
             slots.Add(slot.GetComponent<InventorySlot>());
+            //TODO invSLot samo?????
         }
 
         

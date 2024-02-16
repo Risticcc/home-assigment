@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rb;
     private Animator _animator;
+    
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();

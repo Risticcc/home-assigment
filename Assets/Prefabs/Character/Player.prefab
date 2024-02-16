@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7465323242266613676}
   - component: {fileID: 6410301533863093532}
   - component: {fileID: 1413808184628680549}
+  - component: {fileID: 7986929406668611327}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47714f89558314fa99b78ef6ed90bb7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 10000
+  money: 1000
   moneyText: {fileID: 0}
 --- !u!114 &6410301533863093532
 MonoBehaviour:
@@ -234,6 +235,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7d41603e994430c990855375c508c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7986929406668611327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8640443874651867632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfe44c4dd6b941ab88a5a99ee421164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+  slots: []
+  slotUIPrefab: {fileID: 6781738981921858090, guid: 93bfc4b9956864391b16ee23a6e62ce2, type: 3}
+  storeInventoryUI: {fileID: 0}
+  player: {fileID: 8640443874651867632}
+  playerImage: {fileID: 0}
+  CoinsPanel: {fileID: 0}
 --- !u!1001 &983190499498337211
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MoneyManager : MonoBehaviour
 {
     [SerializeField] private float money;
-    [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private TextMeshProUGUI[] moneyIndicator;
     
     private InventoryWarderobe _inventoryWarderobe;
     
@@ -17,7 +18,7 @@ public class MoneyManager : MonoBehaviour
     }
     
     
-    public void AddMoney(int amount)
+    public void AddMoney(float amount)
     {
         money += amount;
         RefresUI();
@@ -52,6 +53,7 @@ public class MoneyManager : MonoBehaviour
 
     private void RefresUI()
     {
-        moneyText.text = money.ToString();
+        foreach(var item in moneyIndicator)
+            item.text = money.ToString();
     }
 }
