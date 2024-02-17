@@ -43196,7 +43196,7 @@ MonoBehaviour:
   UseEvents: 0
   propmtText: Press 'E' to talk
   interactionPanel: {fileID: 924693619}
-  range: 0.4
+  range: 0.56
 --- !u!114 &1674073100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45393,6 +45393,10 @@ PrefabInstance:
     - target: {fileID: 3272767670008002736, guid: fe08fc261bc9b4551b5c7926a3f7f3fb, type: 3}
       propertyPath: m_TagString
       value: InteractionObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832239577053906420, guid: fe08fc261bc9b4551b5c7926a3f7f3fb, type: 3}
+      propertyPath: range
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3832239577053906420, guid: fe08fc261bc9b4551b5c7926a3f7f3fb, type: 3}
       propertyPath: interactionPanel
