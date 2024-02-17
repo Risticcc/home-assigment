@@ -80,6 +80,7 @@ public class UIManager : MonoBehaviour
     public void ClosePausePanel()
     {
         pausePanel.SetActive(false);
+        Time.timeScale = 1;
     }
     
     public void OpenPausePanel()
