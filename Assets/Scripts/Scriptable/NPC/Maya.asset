@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df2a95c061b3a4b258b0ad0577530b5e, type: 3}
-  m_Name: Mirko
+  m_Name: Maya
   m_EditorClassIdentifier: 
-  name: Mirko
+  name: Maya
   image: {fileID: 21300000, guid: f776e2e9690501e41a2e5b81ceb440b9, type: 3}
   dialogues:
     sentences:
     - Hey there! Looking to part ways with some of your items? You're in luck! Our
-      stall is the perfect place to make a deal. You can sell your foods here
+      stall is the perfect place to make a deal. You can sell your foods here.
   storeDescription: 

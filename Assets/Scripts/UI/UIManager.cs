@@ -36,6 +36,7 @@ public class UIManager : MonoBehaviour
         playerPanel.SetActive(false);
         inventoryPanel.SetActive(false);
         startPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void Update()
@@ -49,6 +50,7 @@ public class UIManager : MonoBehaviour
             else
             {
                 OpenPausePanel();
+                Time.timeScale = 0;
             }
         }
     }
@@ -56,6 +58,7 @@ public class UIManager : MonoBehaviour
     public void CloseStorePanel()
     {
         storePanel.SetActive(false);
+        Time.timeScale = 1;
     }
     
     public void OpenInventoryPanel()

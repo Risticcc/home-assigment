@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df2a95c061b3a4b258b0ad0577530b5e, type: 3}
-  m_Name: Stanko
+  m_Name: Anna
   m_EditorClassIdentifier: 
-  name: Stanko
+  name: Anna
   image: {fileID: 21300000, guid: 8685bc8962ad74c019f8fbc3373d6d8d, type: 3}
   dialogues:
     sentences:
-    - Hey man, you wanna buy something?
-    expectInteraction: 1
+    - Hey, you wanna buy something?
   storeDescription: ' "Ahoy, brave adventurer! Welcome to my humble emporium, where
     the winds of fashion blow as freely as the sea breeze! Step ashore and behold
     the treasures that await your discerning eye. From rugged sailor garb to elegant
