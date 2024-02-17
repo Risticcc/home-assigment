@@ -17,6 +17,5 @@ MonoBehaviour:
   dialogues:
     sentences:
     - Hey there! Looking to part ways with some of your items? You're in luck! Our
-      stall is the perfect place to make a deal. Step right up and let's see what
-      treasures you have to offer
+      stall is the perfect place to make a deal. You can sell your foods here
   storeDescription: 

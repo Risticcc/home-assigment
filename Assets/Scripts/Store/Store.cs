@@ -83,8 +83,8 @@ public class Store : MonoBehaviour
             var invSlot = slot.GetComponent<InventorySlot>();
             invSlot.UpdateSlot(items[i]);
             
-            slots.Add(slot.GetComponent<InventorySlot>());
-            //TODO invSLot samo?????
+            slots.Add(invSlot);
+            
         }
 
         
