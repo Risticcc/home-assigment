@@ -15,10 +15,8 @@ MonoBehaviour:
   name: Mirko
   image: {fileID: 21300000, guid: f776e2e9690501e41a2e5b81ceb440b9, type: 3}
   dialogues:
-  - sentences:
-    - Hey, do you wanna buy something?
-    expectInteraction: 1
-  storeDescription: " \"Ahoy, matey! Welcome to Captain Cloth's Couture Cove \u2013
-    the swankiest cloth store on the seven seas! Here, we don't just sell clothes;
-    we tell tales of sartorial splendor and fashion fiascos, fit for a fashion-forward
-    adventurer like yourself!"
+    sentences:
+    - Hey there! Looking to part ways with some of your items? You're in luck! Our
+      stall is the perfect place to make a deal. Step right up and let's see what
+      treasures you have to offer
+  storeDescription: 

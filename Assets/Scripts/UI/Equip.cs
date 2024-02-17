@@ -24,7 +24,7 @@ public class Equip : MonoBehaviour
     {
         if (_inventorySlot.Item != null)
         {
-            _player.ChangeOutfit(_inventorySlot.Item.outfitId);
+            _player.ChangeOutfit(_inventorySlot.Item.itemId);
             UIManager.Instance.RefreshPlayerPanel();
         }
     }

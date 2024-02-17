@@ -36,7 +36,7 @@ public class OutfitManager : MonoBehaviour
         {
             PlayerInfo item = transform.GetChild(i).GetComponent<PlayerInfo>();
             
-            if(item.Item.outfitId == id)
+            if(item.Item.itemId == id)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
                 _playerOutfitSprite = item.Item.icon;

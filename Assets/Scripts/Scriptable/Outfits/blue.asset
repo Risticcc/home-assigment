@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7ecfcb576d94b398b5a6034a6074b5, type: 3}
   m_Name: blue
   m_EditorClassIdentifier: 
-  outfitId: 1
+  itemId: 1
   name: blue
   price: 200
   icon: {fileID: 21300000, guid: 2de33af1a88fc43efabc2e7d0226a89a, type: 3}

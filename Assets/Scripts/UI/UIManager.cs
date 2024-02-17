@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
         pausePanel.SetActive(false);
         dialoguePanel.SetActive(false);
         playerPanel.SetActive(false);
+        inventoryPanel.SetActive(false);
         startPanel.SetActive(true);
     }
 
@@ -55,6 +56,11 @@ public class UIManager : MonoBehaviour
     public void CloseStorePanel()
     {
         storePanel.SetActive(false);
+    }
+    
+    public void OpenInventoryPanel()
+    {
+        inventoryPanel.SetActive(true);
     }
 
     public void CloseInventoryPanel()
